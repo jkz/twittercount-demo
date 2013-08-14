@@ -1,0 +1,23 @@
+<div class="container" ng-app="gxj" ng-controller="AppCtrl">
+
+<header></header>
+
+<div class="loading" ng-if="!started">LOADING&hellip;</div>
+
+<div ng-if="started && !done">
+
+  <div class=progress-bar>
+    <div style="width: {{percentage}}%">{{percentage}}%</div>
+  </div>
+
+  <div class=progress-circle>
+    <div class="current">{{current}}</div>
+    <div class="target">/{{target}}</div>
+  </div>
+
+  <div>Tweet <strong>#JesseTheGame</strong> to unlock.</div>
+</div>
+
+<iframe ng-if="done" width="600" height="400" src="//www.youtube.com/embed/3GwjfUFyY6M?autoplay=1" frameborder="0" allowfullscreen></iframe>
+
+</div>

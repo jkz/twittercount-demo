@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gamaroff</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+
+<script src=http://code.angularjs.org/1.1.5/angular.min.js></script>
+<script src=http://cdn.pubnub.com/pubnub-3.5.3.min.js></script>
+
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

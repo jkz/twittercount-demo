@@ -1,0 +1,124 @@
+@white: #fff;
+@orange: #c0392b;
+@brown: #671f17;
+
+@grid: 2.5em;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-weight: 100;
+    color: @white;
+    background-color: @orange;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container {
+  display: block;
+  max-width: 600px;
+  margin: auto;
+}
+
+.progress-bar {
+  display: block;
+  background-color: @brown;
+  width: 100%;
+  height: @grid;
+  margin-bottom: @grid / 2;
+  div {
+    height: 100%;
+    color: @orange;
+    text-align: right;
+    background-color: @white;
+    padding-right: 1em;
+    line-height: @grid;
+  }
+}
+
+.progress-circle {
+  display: block;
+  position: relative;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: @grid / 2;
+  width: 4em;
+  height: 4em;
+  padding-top: 0.8em;
+  .current {
+    font-size: 150%;
+  }
+  .target {
+    font-size: 50%;
+  }
+  color: @white;
+  background-color: @brown;
+}
+
+Xheader {
+  margin-bottom: @grid / 2;
+  font-size: 150%;
+}
+
+header {
+  background-image: url(jtg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 690px;
+  width: 600px;
+  height: 76px;
+}
+
+#gamaroff {
+  display: inline-block;
+  text-transform: uppercase;
+  border: solid 2px @white;
+  float: left;
+}
+
+#jessethegame {
+  float: right;
+}
+
+.animate-out {
+  -webkit-transition-property:opacity;
+  -webkit-transition-duration:0.5s;
+  opacity: 0;
+}
+
+.animate-in {
+  -webkit-transition-delay:0.5s;
+  -webkit-transition-duration:0.5s;
+  opacity: 1;
+}
+
+.progress-bar div {
+  -webkit-transition-property: width;
+  -webkit-transition-duration: 0.5s;
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    -webkit-animation: rotating 1s linear infinite;
+}
+
+.loading {
+    .rotating;
+    margin-top: 200px;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
